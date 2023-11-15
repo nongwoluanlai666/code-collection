@@ -17,6 +17,19 @@ export default {
   },
   methods: {}
 };
+
+// // 如果开发者工具打开，则关闭网页
+// import { addListener, launch } from 'devtools-detector';
+// addListener(
+//   isOpen =>
+//     {if (isOpen) {
+//         window.close(); 
+//       }
+//     }
+// );
+// launch();
+
+
 </script>
 
 <style lang="css" scoped>

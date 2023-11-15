@@ -30,6 +30,8 @@
 <script>
 import Vue from "vue";
 import CopyResultView from "@/components/CopyResultView";
+import crypt from "@/js/crypt.js";
+let { EncryptText, DecryptText } = crypt;
 export default {
   name: "StringFromatView",
   props: {
@@ -68,16 +70,16 @@ export default {
               result.push({ label, text });
             };
             //运行
-            eval("(() => (" + data.printFunction + "))();")({}, print);
+            eval("(() => (" + DecryptText(data.printFunction) + "))();")({}, print);
             //获取结果
             this.resultList = result;
           } catch (error) {
             console.error(error);
-            this.resultList = [{ label: "", text: data.printFunction }];
+            this.resultList = [{ label: "", text: DecryptText(data.printFunction) }];
           }
           return;
         }
-        this.printFunction = eval("(() => (" + data.printFunction + "))();");
+        this.printFunction = eval("(() => (" + DecryptText(data.printFunction) + "))();");
         this.init();
       }
     },

@@ -1,17 +1,15 @@
 {
-  "name": "postgirl",
+  "name": "code-collection",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve --port 1234",
+    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "copy-to-clipboard": "^3.2.0",
     "core-js": "^2.6.5",
-    "crypto-js": "^4.2.0",
-    "devtools-detector": "^2.0.14",
     "element-ui": "^2.4.5",
     "uuid": "^3.3.3",
     "vue": "^2.6.10",

@@ -19,6 +19,9 @@
         <el-dropdown-item size="mini">
           <div @click="download">导出</div>
         </el-dropdown-item>
+        <el-dropdown-item size="mini">
+          <div @click="downloadEncrypt">加密导出</div>
+        </el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
   </el-dialog>
@@ -26,6 +29,8 @@
 
 <script>
 import exportText from "@/js/exportText.js";
+import crypt from "@/js/crypt.js";
+let { EncryptText, DecryptText } = crypt;
 import copy from "copy-to-clipboard";
 import langUtil from "@/js/langUtil.js";
 let { timeFormat } = langUtil;
@@ -47,6 +52,9 @@ export default {
     },
     download() {
       exportText(`string-format-${timeFormat(new Date(), "yyyy-mm-dd hh:MM:ss")}.json`, this.code);
+    },
+    downloadEncrypt() {
+      exportText(`string-format-${timeFormat(new Date(), "yyyy-mm-dd hh:MM:ss")}.json`, EncryptText(this.code));
     }
   }
 };

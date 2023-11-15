@@ -24,20 +24,20 @@
               icon="el-icon-delete"
             >删除</el-button>
           </el-badge>
-          <el-button
-            type="primary"
-            style="margin-left: 20px;"
-            @click="showUpload"
-            icon="el-icon-upload2"
-          >导入</el-button>
           <el-badge :value="selectList.length" :hidden="selectList.length == 0" class="item">
             <el-button
               type="primary"
               style="margin-left: 20px;"
               @click="showDownload"
-              icon="el-icon-download"
+              icon="el-icon-upload2"
             >导出</el-button>
           </el-badge>
+          <el-button
+            type="primary"
+            style="margin-left: 20px;"
+            @click="showUpload"
+            icon="el-icon-download"
+          >导入</el-button>
         </span>
       </transition>
       <el-switch v-model="inEditMode" class="head-mode-switch" active-text="开启编辑"></el-switch>
