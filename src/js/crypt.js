@@ -6,11 +6,11 @@ function IsEncryptText(data) {
     try {
         if(data.startsWith("function(")){
             return false;
-        };
+        }
       const decryptedData = CryptoJS.AES.decrypt(data, secretKey).toString(CryptoJS.enc.Utf8);
-      if(decryptedData.startsWith("function(")){
+      if(decryptedData.trim().startsWith("function(")){
         return true;
-    };
+    }
       return false;
     } catch (error) {
       return false;

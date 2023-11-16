@@ -158,7 +158,6 @@ export default {
         close();
         this.$message.success("导入成功");
       } catch (e) {
-        console.error(e);
         this.$message.error("导入格式错误");
       }
     },

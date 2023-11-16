@@ -23,7 +23,6 @@ export default {
         }
         return setId(result);
       } catch (e) {
-        console.error(e, functionInfoList);
         localStorage.setItem("functionList", "[]");
         return [];
       }

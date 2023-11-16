@@ -18,7 +18,7 @@ export default {
   methods: {}
 };
 
-// // 如果开发者工具打开，则关闭网页
+// 如果开发者工具打开，则关闭网页
 // import { addListener, launch } from 'devtools-detector';
 // addListener(
 //   isOpen =>
